@@ -8,44 +8,65 @@
 </head>
 <body>
     <main class="container-formulario">
+        
         <h1>Inscripción a un curso</h1>
         <p>Rellena este formulario para inscribirte en el curso. Los campos marcados con * son obligatorios.</p>
         
         <!--Datos personales-->
-        <fieldset>
+        <fieldset class="datos-personales">
             <legend>Datos personales</legend>
-            <div>
-                <label for="name">Nombre completo *</label>
-                <input type="text" id="name" name="name" placeholder="Nombre y apellidos" required>
+            <div class="div1">
+                <div>
+                    <label for="name">
+                        Nombre completo * <br>
+                        <input type="text" id="name" name="name" placeholder="Nombre y apellidos" required>
+                    </label>
+                </div>
+                <div>
+                    <label for="dni">
+                        DNI / NIE * <br>
+                        <input type="text" id="dni" name="dni" placeholder="00000000X" required>
+                    </label>
+                </div>
             </div>
-            <div>
-                <label for="dni">DNI / NIE *</label>
-                <input type="text" id="dni" name="dni" placeholder="00000000X" required>
+            <div class="div1">
+                <div>
+                    <label for="email">
+                        Correo electrónico * <br>
+                        <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
+                    </label>
+                </div>
+                <div>
+                    <label for="telefono">
+                        Teléfono de contacto * <br>
+                        <input type="tel" name="telefono" id="telefono" placeholder="+34 600 000 000">
+                    </label>
+                </div>
             </div>
-            <div>
-                <label for="email">Correo electrónico *</label>
-                <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
-            </div>
-            <div>
-                <label for="telefono">Teléfono de contacto *</label>
-                <input type="tel" name="telefono" id="telefono" placeholder="+34 600 000 000">
-            </div>
-            <div>
-                <label for="fecha-nacimiento">Fecha de nacimiento *</label>
-                <input type="date" name="fecha-nacimiento" id="fecha-nacimiento" required>
-            </div>
-            <div>
-                <label for="ciudad">Ciudad</label>
-                <input type="text" name="ciudad" id="ciudad" placeholder="Barcelona">
-            </div>
-            <div>
-                <label for="direccion-postal">Dirección postal</label>
-                <input type="text" name="direccion-postal" id="direccion-postal" placeholder="Calle, número, piso">
+            <div class="div1">
+                <div>
+                    <label for="fecha-nacimiento">
+                        Fecha de nacimiento * <br>
+                        <input type="date" name="fecha-nacimiento" id="fecha-nacimiento" required>
+                    </label>
+                </div>
+                <div>
+                    <label for="ciudad">
+                        Ciudad <br>
+                        <input type="text" name="ciudad" id="ciudad" placeholder="Barcelona">
+                    </label>
+                </div>
+            </div>    
+            <div class="div1">
+                <label for="direccion-postal">
+                    Dirección postal <br>
+                    <input type="text" name="direccion-postal" id="direccion-postal" placeholder="Calle, número, piso">
+                </label>
             </div>
         </fieldset>
 
         <!--Información academica-->
-        <fieldset>
+        <fieldset class="informacion-academica">
             <legend>Información académica y curso</legend>
             <div>
                 <label for="curso">
@@ -101,7 +122,7 @@
         </fieldset>
 
         <!--Preferencias-->
-        <fieldset>
+        <fieldset class="preferencias">
             <legend>Preferencias y servicios adicionales</legend>
             <div>
                 <label for="horario-contacto">Franja horaria preferente de contacto</label>
@@ -130,11 +151,12 @@
                 <label for="acceso-bolsa-trabajo-practicas">Quiero acceso a la bolsa de trabajo/prácticas</label><br>
             </div>
         </fieldset>
-        <fieldset>
+       
+        <fieldset class="documentacion">
             <legend>Documentación</legend>
             <div>
                 <div>
-                    <label for="file-dni"></label>
+                    <label for="file-dni">Copia del DNI / NIE (PDF o imagen)</label>
                     <input type="file" name="file-dni" id="file-dni" accept=".pdf,image/*">
                 </div>
                 <div>
@@ -144,7 +166,7 @@
             </div>
         </fieldset>
         <!--Comentarios adicionales-->
-        <fieldset>
+        <fieldset class="comentarios-adicionales-proteccion-datos">
             <legend>Comentarios adicionales y protección de datos</legend>
             <label for="comentarios-adicionales">Comentarios adicionales
                 <textarea name="comentarios-adicionales" id="comentarios-adicionales" rows="4" placeholder="Indica cualquier información relevante (discapacidad, compatibilidad con trabajo, etc.)"></textarea>
