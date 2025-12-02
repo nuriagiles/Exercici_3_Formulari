@@ -57,7 +57,7 @@
                     </label>
                 </div>
             </div>    
-            <div class="div1">
+            <div class="div2">
                 <label for="direccion-postal">
                     Dirección postal <br>
                     <input type="text" name="direccion-postal" id="direccion-postal" placeholder="Calle, número, piso">
@@ -68,46 +68,52 @@
         <!--Información academica-->
         <fieldset class="informacion-academica">
             <legend>Información académica y curso</legend>
-            <div>
-                <label for="curso">
-                    Curso al que te quieres inscribir *
-                    <select name="curso" id="curso">
-                        <option value="">Selecciona un curso...</option>
-                        <option value="dam1">1º DAM - Desarrollo de Aplicaciones Multiplataforma</option>
-                        <option value="daw1">1º DAW - Desarrollo de Aplicaciones Web</option>
-                        <option value="asir1">1º ASIR - Administración de Sistemas Informáticos en Red</option>
-                        <option value="smx1">1º SMX - Sistemas Microinformáticos y Redes</option>
-                    </select>
-                </label>
-            </div>
-            <div>
-                <label for="turno">Turno preferente *</label>
+            <div class="div1">
                 <div>
-                    <label for="mañana">
-                        <input type="radio" name="turno" id="manana">
-                        Mañana
+                    <label for="curso">
+                        Curso al que te quieres inscribir *<br>
+                        <select name="curso" id="curso">
+                            <option value="">Selecciona un curso...</option>
+                            <option value="dam1">1º DAM - Desarrollo de Aplicaciones Multiplataforma</option>
+                            <option value="daw1">1º DAW - Desarrollo de Aplicaciones Web</option>
+                            <option value="asir1">1º ASIR - Administración de Sistemas Informáticos en Red</option>
+                            <option value="smx1">1º SMX - Sistemas Microinformáticos y Redes</option>
+                        </select>
                     </label>
-                    <label for="tarde">
-                        <input type="radio" name="turno" id="tarde">
-                        Tarde
-                    </label>
-                    <label for="indiferente">
-                        <input type="radio" name="turno" id="indiferente">
-                        Indiferente
-                    </label> 
+                </div>
+                <div>
+                    <label for="turno">Turno preferente *</label>
+                    <div>
+                        <label for="mañana">
+                            <input type="radio" name="turno" id="manana">
+                            Mañana <br>
+                        </label>
+                        <label for="tarde">
+                            <input type="radio" name="turno" id="tarde">
+                            Tarde <br>
+                        </label>
+                        <label for="indiferente">
+                            <input type="radio" name="turno" id="indiferente">
+                            Indiferente
+                        </label> 
+                    </div>
                 </div>
             </div>
-            <div>
-                <label for="nota-media">Nota media del último estudio</label>
-                <input type="number" name="nota-media" id="nota-media" min="0" max="10" step="0.1" placeholder="Ej: 7.5">
+            
+            <div class="div1">
+                <div>
+                    <label for="nota-media">Nota media del último estudio</label> <br>
+                    <input type="number" name="nota-media" id="nota-media" min="0" max="10" step="0.1" placeholder="Ej: 7.5">
+                </div>
+                <div>
+                    <label for="experiencia-programacion">Experiencia en programación (0 = nada, 10 = mucha)</label> <br>
+                    <input type="range" id="experiencia-programacion" name="experiencia-programacion" min="0" max="10" value="3">
+                </div>
             </div>
-            <div>
-                <label for="experiencia-programacion">Experiencia en programación (0 = nada, 10 = mucha)</label>
-                <input type="range" id="experiencia-programacion" name="experiencia-programacion" min="0" max="10" value="3">
-            </div>
-            <div>
+
+            <div class="div2">
                 <label for="estudios-previos">
-                    Estudios previos 
+                    Estudios previos <br>
                     <select name="estudios-previos" id="estudios-previos">
                         <option value="">Selecciona una opción...</option>
                         <option value="eso">ESO</option>
@@ -124,43 +130,46 @@
         <!--Preferencias-->
         <fieldset class="preferencias">
             <legend>Preferencias y servicios adicionales</legend>
-            <div>
-                <label for="horario-contacto">Franja horaria preferente de contacto</label>
-                <input type="time" name="horario-contacto" id="horario-contacto">
+            <div class="div1-1">
+                    <div>
+                    <label for="horario-contacto">Franja horaria preferente de contacto</label> <br>
+                    <input type="time" name="horario-contacto" id="horario-contacto">
+                </div>
+                <div>
+                    <label for="como-conocido">¿Cómo nos has conocido?</label> <br>
+                    <input list="origen" name="como-conocido" id="como-conocido" placeholder="Empieza a escribir...">
+                    <datalist id="origen">
+                        <option value="Amigos / conocidos"></option>
+                        <option value="Redes sociales"></option>
+                        <option value="Página web del centro"></option>
+                        <option value="Feria educativa"></option>
+                        <option value="Profesor/a de tu centro"></option>
+                    </datalist>
+                </div>
+                <div>
+                    <label for="servicios-adicionales">Servicios adicionales (opcional):</label><br>
+                    <input type="checkbox" name="servicio1" id="servicio1" value="sesion-academica">
+                    <label for="sesion-orientacion-academica">Quiero recibir una sesión de orientación académica</label><br>
+                    
+                    <input type="checkbox" name="servicio2" id="servicio2" value="informacion-becas">
+                    <label for="informacion-becas-ayudas">Quiero información sobre becas y ayudas</label><br>
+                    
+                    <input type="checkbox" name="servicio3" id="servicio3" value="bolsa-trabajo">
+                    <label for="acceso-bolsa-trabajo-practicas">Quiero acceso a la bolsa de trabajo/prácticas</label><br>
+                </div>
             </div>
-            <div>
-                <label for="como-conocido">¿Cómo nos has conocido?</label>
-                <input list="origen" name="como-conocido" id="como-conocido" placeholder="Empieza a escribir...">
-                <datalist id="origen">
-                    <option value="Amigos / conocidos"></option>
-                    <option value="Redes sociales"></option>
-                    <option value="Página web del centro"></option>
-                    <option value="Feria educativa"></option>
-                    <option value="Profesor/a de tu centro"></option>
-                </datalist>
-            </div>
-            <div>
-                <label for="servicios-adicionales">Servicios adicionales (opcional):</label><br>
-                <input type="checkbox" name="servicio1" id="servicio1" value="sesion-academica">
-                <label for="sesion-orientacion-academica">Quiero recibir una sesión de orientación académica</label><br>
-                
-                <input type="checkbox" name="servicio2" id="servicio2" value="informacion-becas">
-                <label for="informacion-becas-ayudas">Quiero información sobre becas y ayudas</label><br>
-                
-                <input type="checkbox" name="servicio3" id="servicio3" value="bolsa-trabajo">
-                <label for="acceso-bolsa-trabajo-practicas">Quiero acceso a la bolsa de trabajo/prácticas</label><br>
-            </div>
+            
         </fieldset>
        
         <fieldset class="documentacion">
             <legend>Documentación</legend>
-            <div>
+            <div class="div1">
                 <div>
-                    <label for="file-dni">Copia del DNI / NIE (PDF o imagen)</label>
+                    <label for="file-dni">Copia del DNI / NIE (PDF o imagen)</label><br>
                     <input type="file" name="file-dni" id="file-dni" accept=".pdf,image/*">
                 </div>
                 <div>
-                    <label for="file-notas">Certificado de notas (PDF)</label>
+                    <label for="file-notas">Certificado de notas (PDF)</label> <br>
                     <input type="file" name="file-notas" id="file-notas" accept=".pdf">
                 </div>
             </div>
@@ -168,7 +177,8 @@
         <!--Comentarios adicionales-->
         <fieldset class="comentarios-adicionales-proteccion-datos">
             <legend>Comentarios adicionales y protección de datos</legend>
-            <label for="comentarios-adicionales">Comentarios adicionales
+            <label for="comentarios-adicionales">
+                Comentarios adicionales <br>
                 <textarea name="comentarios-adicionales" id="comentarios-adicionales" rows="4" placeholder="Indica cualquier información relevante (discapacidad, compatibilidad con trabajo, etc.)"></textarea>
             </label>
             
@@ -180,12 +190,12 @@
                 <input type="checkbox" name="recibir-comunicacion" id="recibir-comunicacion">
                 Acepto recibir comunicaciones informativas sobre otros cursos
             </label>
-            <div>
-                <button type="submit">Enviar solicitud</button>
-                <button type="reset">Limpiar formulario</button>
-            </div>
+            
         </fieldset>
-        
+        <div class="div1">
+            <button type="submit">Enviar solicitud</button>
+            <button type="reset">Limpiar formulario</button>
+        </div>
     </main>
 </body>
 </html>
