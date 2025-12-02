@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="container-formulario">
+        <h1>Inscripción a un curso</h1>
+        <p>Rellena este formulario para inscribirte en el curso. Los campos marcados con * son obligatorios.</p>
+        
+        <!--Datos personales-->
+        <fieldset>
+            <legend>Datos personales</legend>
+            <div>
+                <label for="name">Nombre completo *</label>
+                <input type="text" id="name" name="name" placeholder="Nombre y apellidos" required>
+            </div>
+            <div>
+                <label for="dni">DNI / NIE *</label>
+                <input type="text" id="dni" name="dni" placeholder="00000000X" required>
+            </div>
+            <div>
+                <label for="email">Correo electrónico *</label>
+                <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
+            </div>
+            <div>
+                <label for="telefono">Teléfono de contacto *</label>
+                <input type="tel" name="telefono" id="telefono" placeholder="+34 600 000 000">
+            </div>
+            <div>
+                <label for="fecha-nacimiento">Fecha de nacimiento *</label>
+                <input type="date" name="fecha-nacimiento" id="fecha-nacimiento" required>
+            </div>
+            <div>
+                <label for="ciudad">Ciudad</label>
+                <input type="text" name="ciudad" id="ciudad" placeholder="Barcelona">
+            </div>
+            <div>
+                <label for="direccion-postal">Dirección postal</label>
+                <input type="text" name="direccion-postal" id="direccion-postal" placeholder="Calle, número, piso">
+            </div>
+        </fieldset>
+
+        <!--Información academica-->
+        <fieldset>
+            <legend>Información académica y curso</legend>
+            <div>
+                <label for="curso">
+                    Curso al que te quieres inscribir *
+                    <select name="curso" id="curso">
+                        <option value="">Selecciona un curso...</option>
+                        <option value="dam1">1º DAM - Desarrollo de Aplicaciones Multiplataforma</option>
+                        <option value="daw1">1º DAW - Desarrollo de Aplicaciones Web</option>
+                        <option value="asir1">1º ASIR - Administración de Sistemas Informáticos en Red</option>
+                        <option value="smx1">1º SMX - Sistemas Microinformáticos y Redes</option>
+                    </select>
+                </label>
+            </div>
+            <div>
+                <label for="turno">Turno preferente *</label>
+                <div>
+                    <label for="mañana">
+                        <input type="radio" name="turno" id="manana">
+                        Mañana
+                    </label>
+                    <label for="tarde">
+                        <input type="radio" name="turno" id="tarde">
+                        Tarde
+                    </label>
+                    <label for="indiferente">
+                        <input type="radio" name="turno" id="indiferente">
+                        Indiferente
+                    </label> 
+                </div>
+            </div>
+            <div>
+                <label for="nota-media">Nota media del último estudio</label>
+                <input type="number" name="nota-media" id="nota-media" min="0" max="10" step="0.1" placeholder="Ej: 7.5">
+            </div>
+            <div>
+                <label for="experiencia-programacion">Experiencia en programación (0 = nada, 10 = mucha)</label>
+                <input type="range" id="experiencia-programacion" name="experiencia-programacion" min="0" max="10" value="3">
+            </div>
+            <div>
+                <label for="estudios-previos">
+                    Estudios previos 
+                    <select name="estudios-previos" id="estudios-previos">
+                        <option value="">Selecciona una opción...</option>
+                        <option value="eso">ESO</option>
+                        <option value="bachillerato">Bachillerato</option>
+                        <option value="cfgm">Ciclo Formativo de Grado Medio</option>
+                        <option value="cfgs">Ciclo Formativo de Grado Superior</option>
+                        <option value="universidad">Estudios universitarios</option>
+                        <option value="otros">Otros</option>
+                    </select>
+                </label>
+            </div>
+        </fieldset>
+
+        <!--Preferencias-->
+        <fieldset>
+            <legend>Preferencias y servicios adicionales</legend>
+            <div>
+                <label for="horario-contacto">Franja horaria preferente de contacto</label>
+                <input type="time" name="horario-contacto" id="horario-contacto">
+            </div>
+            <div>
+                <label for="como-conocido">¿Cómo nos has conocido?</label>
+                <input list="origen" name="como-conocido" id="como-conocido" placeholder="Empieza a escribir...">
+                <datalist id="origen">
+                    <option value="Amigos / conocidos"></option>
+                    <option value="Redes sociales"></option>
+                    <option value="Página web del centro"></option>
+                    <option value="Feria educativa"></option>
+                    <option value="Profesor/a de tu centro"></option>
+                </datalist>
+            </div>
+            <div>
+                <label for="servicios-adicionales">Servicios adicionales (opcional):</label><br>
+                <input type="checkbox" name="servicio1" id="servicio1" value="sesion-academica">
+                <label for="sesion-orientacion-academica">Quiero recibir una sesión de orientación académica</label><br>
+                
+                <input type="checkbox" name="servicio2" id="servicio2" value="informacion-becas">
+                <label for="informacion-becas-ayudas">Quiero información sobre becas y ayudas</label><br>
+                
+                <input type="checkbox" name="servicio3" id="servicio3" value="bolsa-trabajo">
+                <label for="acceso-bolsa-trabajo-practicas">Quiero acceso a la bolsa de trabajo/prácticas</label><br>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Documentación</legend>
+            <div>
+                <div>
+                    <label for="file-dni"></label>
+                    <input type="file" name="file-dni" id="file-dni" accept=".pdf,image/*">
+                </div>
+                <div>
+                    <label for="file-notas">Certificado de notas (PDF)</label>
+                    <input type="file" name="file-notas" id="file-notas" accept=".pdf">
+                </div>
+            </div>
+        </fieldset>
+        <!--Comentarios adicionales-->
+        <fieldset>
+            <legend>Comentarios adicionales y protección de datos</legend>
+            <label for="comentarios-adicionales">Comentarios adicionales
+                <textarea name="comentarios-adicionales" id="comentarios-adicionales" rows="4" placeholder="Indica cualquier información relevante (discapacidad, compatibilidad con trabajo, etc.)"></textarea>
+            </label>
+            
+            <label for="acepto-politica">
+                <input type="checkbox" name="acepto-politica" id="acepto-politica" required>
+                Acepto la política de privacidad y el tratamiento de mis datos *
+            </label> 
+           <label for="recibir-comunicacion">
+                <input type="checkbox" name="recibir-comunicacion" id="recibir-comunicacion">
+                Acepto recibir comunicaciones informativas sobre otros cursos
+            </label>
+            <div>
+                <button type="submit">Enviar solicitud</button>
+                <button type="reset">Limpiar formulario</button>
+            </div>
+        </fieldset>
+        
+    </main>
+</body>
+</html>
