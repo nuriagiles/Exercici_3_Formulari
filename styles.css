@@ -26,32 +26,3 @@ legend{
 }
 
 /*casillas*/
-main{
-    display: grid;
-    gap: 20px;
-    justify-items: center;
-}
-fieldset{
-    border: none;
-    width: 1204px;
-    line-height: 20px;
-}
-.div1{
-    display: flex;
-    gap: 20px;
-}
-input{
-    padding: 15px 20px 15px 20px;
-    width: 548px;
-}
-.div2 input{
-    padding: 15px 20px 15px 20px;
-    width: -webkit-fill-available;
-}
-.div2 select{
-    padding: 15px 20px 15px 20px;
-    width: -webkit-fill-available;
-}
-.div3{
-    justify-items: left;
-}
